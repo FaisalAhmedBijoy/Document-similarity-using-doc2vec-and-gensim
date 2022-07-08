@@ -25,13 +25,19 @@ def preprocess(data_dir):
             # remove stopwords
             data = [re.sub(r'[^\w\s]','',line) for line in data]
             data = [re.sub(r'\n','',line) for line in data]
-            data=[word for word in data if word not in stopwords.words('english')]
+            data = [re.sub(r'\s+',' ',line) for line in data]
+            data = [line.lower() for line in data]
+            data = [word for word in data if word not in stopwords.words('english')]
+            
+
             # if the len of a word is 1, remove it
             data = [word for word in data if len(word)>1]
             # remove space in the text
             data = [word.strip() for word in data]
             # print(data)
             word_list.extend(data)
+            # print((word_list))
+          
            
 
             # text_tokenizer=list(map(word_tokenize,data.split()))
