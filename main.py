@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from nltk import word_tokenize
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-from preprocessing.dataset_preprocess import preprocess
+from dataset_preprocess import preprocess
 
 def doc2vec(word_list,model_save_path,vector_save_path):
   
