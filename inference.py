@@ -1,6 +1,6 @@
 import gensim
 import numpy as np
-from preprocessing.dataset_preprocess import preprocess
+from dataset_preprocess import preprocess
 from nltk.tokenize import word_tokenize
 from gensim import similarities
 from sklearn.metrics.pairwise import cosine_similarity
