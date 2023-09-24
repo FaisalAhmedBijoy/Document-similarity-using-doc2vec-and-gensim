@@ -19,10 +19,7 @@ def preprocess(data_dir):
             # print(filename)
             with open(filename,'r') as f:
                 data=f.readlines()
-            # print(data)
-            # remove punctuation
-            # remove \n in the text
-            # remove stopwords
+
             data = [re.sub(r'[^\w\s]','',line) for line in data]
             data = [re.sub(r'\n','',line) for line in data]
             data = [re.sub(r'\s+',' ',line) for line in data]
@@ -37,17 +34,11 @@ def preprocess(data_dir):
             # print(data)
             word_list.extend(data)
             # print((word_list))
-          
-           
-
-            # text_tokenizer=list(map(word_tokenize,data.split()))
-            # print(text_tokenizer)
             
     return word_list
 
 
 
 if __name__ == '__main__':
-    dataset_dir="D:/Code and Tutorial Practice/NSL_work/Gensim_doc2vec/datasets/20news-bydate-test"
+    dataset_dir="datasets/20news-bydate-test"
     word_list=preprocess(dataset_dir)
-    # print(word_list)

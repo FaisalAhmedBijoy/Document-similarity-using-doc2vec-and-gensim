@@ -37,9 +37,9 @@ def similarity_check(model_path,vector_path,dataset_dir,test_data_1,test_data_2)
 
 
 if __name__ == '__main__':
-    model_path='D:/Code and Tutorial Practice/NSL_work/Gensim_doc2vec/models/doc2vec_model.bin'
-    vector_path='D:/Code and Tutorial Practice/NSL_work/Gensim_doc2vec/models/doc2vec_vector.txt'
-    dataset_dir="D:/Code and Tutorial Practice/NSL_work/Gensim_doc2vec/datasets/20news-bydate-test"
+    model_path='models/doc2vec_model.bin'
+    vector_path='models/doc2vec_vector.txt'
+    dataset_dir="datasets/20news-bydate-test"
     test_data_1='Bird is beautiful'
     test_data_2='Bird is beautiful'
     similarity_check(model_path,vector_path,dataset_dir,test_data_1,test_data_2)
